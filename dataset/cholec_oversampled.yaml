@@ -1,0 +1,19 @@
+names:
+- grasper
+- bipolar
+- hook
+- scissors
+- clipper
+- irrigator
+- specimen-bag
+nc: 7
+train: /content/drive/MyDrive/track_prediction_project/track_prediction_project/scripts/dataset/train_oversampled.txt
+val: /content/drive/MyDrive/track_prediction_project/track_prediction_project/scripts/dataset/images/val
+weights:
+- 0.0692
+- 1.1392
+- 0.1052
+- 1.7496
+- 1.5007
+- 1.68
+- 0.756

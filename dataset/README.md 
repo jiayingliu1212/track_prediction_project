@@ -1,0 +1,45 @@
+# CholecTrack20 Dataset (Usage in This Project)
+
+This project uses the **CholecTrack20** dataset, introduced by Nwoye et al. at CVPR 2025.
+The dataset provides **20 annotated laparoscopic cholecystectomy videos** with tool tracking labels, designed for multi-perspective surgical instrument trajectory analysis.
+
+---
+
+## 📌 Dataset Overview
+- **Procedures**: Laparoscopic cholecystectomy
+- **Videos**: 20 anonymized surgical videos
+- **Annotations**:
+  - Tool bounding boxes (7 categories: grasper, bipolar, hook, scissors, clipper, irrigator, specimen bag)
+  - Operator identities (main surgeon, assistant, null)
+  - Phase labels and visual conditions (occlusion, smoke, bleeding, blur)
+  - Multi-perspective tracking:
+    1. **Visibility trajectory** (in camera view)
+    2. **Intracorporeal trajectory** (inside patient’s body)
+    3. **Intraoperative trajectory** (entire procedure, OOCV & OOB handled)
+
+- **Frame rate**: 1 FPS annotations (~35k frames, ~65k labeled instances);
+  raw videos available at 25 FPS for inference.
+
+---
+
+## 📂 Data Access
+Due to storage limits, **the full dataset is not included in this repository**.
+You can download it from the official sources:
+
+- [Official Website (Camma Lab)](https://camma.u-strasbg.fr/datasets/cholectrack20/)
+- [ArXiv Paper (with links)](https://arxiv.org/abs/2312.07352)
+
+---
+
+## 📂 Local Dataset Structure (expected)
+When downloaded and extracted, the dataset should follow this structure:
+dataset/
+├── train/
+│ ├── video_01/
+│ │ ├── video.mp4
+│ │ ├── frames/...
+│ │ └── labels.json
+│ └── ...
+├── val/
+├── test/
+└── cholec.yaml # data config for training
